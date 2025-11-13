@@ -1,6 +1,3 @@
-Pada slide ini ditunjukkan contoh program sederhana yang memperlihatkan bagaimana struktur data stack bekerja. Stack adalah tumpukan data yang memakai konsep LIFO (Last In, First Out), artinya elemen yang dimasukkan paling akhir akan menjadi elemen pertama yang diambil.
-
-
 1. Membuat Stack
 stack = []
 ______________________________________________________________________
@@ -54,3 +51,59 @@ print("Size: ", len(stack))
 ______________________________________________________________________
 Bagian ini menampilkan berapa banyak elemen yang tersisa pada stack setelah operasi pop dilakukan.
 Karena 'C' sudah dihapus, maka total elemen kini menjadi 2.
+
+00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+1. Membuat Queue
+queue = []
+______________________________________________________________________
+Program memulai dengan membuat list kosong yang akan digunakan sebagai antrian.
+List ini menjadi tempat seluruh elemen yang masuk ke queue.
+
+
+
+2. Operasi Enqueue (Menambahkan Elemen ke Belakang Antrian)
+queue.append('A')
+queue.append('B')
+queue.append('C')
+print("Queue: ", queue)
+______________________________________________________________________
+Bagian ini memasukkan tiga data: 'A', 'B', dan 'C'.
+Setiap elemen ditambahkan ke posisi paling belakang antrian menggunakan append().
+Pada tahap ini, isi queue menjadi: ['A', 'B', 'C'].
+
+
+
+3. Operasi Dequeue (Mengambil Elemen Paling Depan)
+element = queue.pop(0)
+print("Dequeue: ", element)
+______________________________________________________________________
+Operasi dequeue menghapus elemen pertama dari antrian, yaitu indeks ke-0.
+Karena queue memakai sistem FIFO, maka 'A' adalah elemen pertama yang keluar.
+
+
+
+4. Operasi Peek (Melihat Elemen Depan Tanpa Menghapus)
+frontElement = queue[0]
+print("Peek: ", frontElement)
+______________________________________________________________________
+Dengan mengakses queue[0], program dapat mengetahui elemen terdepan saat ini.
+Setelah 'A' terhapus, elemen berikutnya di depan adalah 'B'.
+
+
+
+
+5. Mengecek Apakah Queue Kosong
+isEmpty = not bool(queue)
+print("isEmpty: ", isEmpty)
+______________________________________________________________________
+Program memeriksa apakah antrian masih memiliki elemen.
+Jika list tidak kosong, maka queue masih berisi data dan hasilnya adalah False.
+
+
+
+6. Menghitung Jumlah Elemen dalam Queue
+print("Size: ", len(queue))
+______________________________________________________________________
+Bagian ini menghitung total elemen di dalam antrian setelah operasi dequeue.
+Karena 'A' sudah dihapus, isi queue sekarang tinggal dua elemen.
